@@ -11,11 +11,11 @@ outpin = "P9_12"
 GPIO.setup(outpin,GPIO.OUT)
 from time import sleep
 
-for i in range(0,5):
+while(1)
     GPIO.output(outpin,GPIO.HIGH)
     print("You Suck")
     sleep(1)
     GPIO.output(outpin,GPIO.LOW)
     print("You rock")
     sleep(1)
-GPIO.cleanup()
+
