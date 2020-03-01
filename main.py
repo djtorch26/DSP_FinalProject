@@ -14,9 +14,9 @@ from time import sleep
 
 for i in range(0,5):
     GPIO.output(outpin,GPIO.HIGH)
-    #print("You Suck")
+    print("You Suck")
     sleep(1)
     GPIO.output(outpin,GPIO.LOW)
-    #print("You rock")
+    print("You rock")
     sleep(1)
 GPIO.cleanup()
