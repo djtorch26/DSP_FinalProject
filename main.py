@@ -4,19 +4,22 @@ Dawson Tocarchick, Nicholas Riggins, Kyle Limbaga
 
 Main.py for Speech to text analysis
 """
-
+#import packages
 import Adafruit_BBIO.GPIO as GPIO
+import Adafruit_BBIO.ADC as ADC
+from time import sleep
+import adc_setup.h
 
+#setup and pin Instantiations
 outpin = "P9_12"
 GPIO.setup(outpin,GPIO.OUT)
-from time import sleep
+adc_setup()
 
+value = ADC.read('AIN1')
+voltage = value * 1.8
+loop = True
 
-for i in range(0,5):
-    GPIO.output(outpin,GPIO.HIGH)
-    print("You Suck")
-    sleep(1)
-    GPIO.output(outpin,GPIO.LOW)
-    print("You rock")
-    sleep(1)
-GPIO.cleanup()
+while loop:
+    print(' Value = %(val) \n Voltage = %(volt)' %{'val': value, 'volt': voltage})
+    sleep(.5)
+    
