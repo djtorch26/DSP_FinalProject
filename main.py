@@ -8,12 +8,12 @@ Main.py for Speech to text analysis
 import Adafruit_BBIO.GPIO as GPIO
 import Adafruit_BBIO.ADC as ADC
 from time import sleep
-import adc_setup.h
+import adc_setup.py as adc
 
 #setup and pin Instantiations
 outpin = "P9_12"
 GPIO.setup(outpin,GPIO.OUT)
-adc_setup()
+adc.setup_adc()
 
 value = ADC.read('AIN1')
 voltage = value * 1.8

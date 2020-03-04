@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
+import Adafruit_BBIO.ADC as ADC
 
-adc_setup()
+def setup_adc():
     ADC.setup()
     "AIN4", "P9_33"
     "AIN6", "P9_35"
