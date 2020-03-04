@@ -20,6 +20,6 @@ voltage = value * 1.8
 loop = True
 
 while loop:
-    print('Value = %(s)\nVoltage = %(s)' %(value,voltage))
+    print('Value = %s\nVoltage = %s' %(value,voltage))
     sleep(.5)
     
