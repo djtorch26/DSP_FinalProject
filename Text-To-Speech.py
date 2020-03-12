@@ -15,7 +15,6 @@ def main():
     Part 1: Collect data from ADC using P9_40 from microphone
     """
     p = pinSetup.StartSample('P9_40')
-    print(p)
     """
     Part 2: Analysis and generation of .wav file
     """
