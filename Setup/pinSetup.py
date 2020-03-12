@@ -6,7 +6,7 @@ output = []
 
 def StartSample(pin):
     ADC.setup()
-    for i in range(0, 8500):
+    for i in range(0, 8500): #should be 
         output.append(ADC.read(pin)*1.8)
         print(output[i])
     return output
