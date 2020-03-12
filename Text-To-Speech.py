@@ -2,7 +2,7 @@
 """
 Dawson Tocarchick, Nicholas Riggins, Kyle Limbaga
 
-Speech to text analysis main file
+Speech to text analysis main
 """
 #import packages
 import Adafruit_BBIO.GPIO as GPIO
@@ -14,7 +14,7 @@ def main():
     """
     Part 1: Collect data from ADC using P9_40 from microphone
     """
-    p = pinSetup.StartSample('P9_40')
+    pinSetup.StartSample('P9_40')
     """
     Part 2: Analysis and generation of .wav file
     """
