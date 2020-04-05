@@ -9,12 +9,14 @@ import Adafruit_BBIO.GPIO as GPIO
 import Adafruit_BBIO.ADC as ADC
 from time import sleep
 from Setup import pinSetup
+import os
 
 def main():
     """
     Part 1: Collect data from ADC using P9_40 from microphone
     """
     pinSetup.StartSample('P9_40')
+    
     """
     Part 2: Analysis and generation of .wav file
     """
