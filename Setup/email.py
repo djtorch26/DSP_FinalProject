@@ -8,11 +8,19 @@ Created on Wed Apr 22 09:29:36 2020
 import os
 
 import smtplib
+import mimetypes
 
-from email.mime.multipart import MIMEMultipart
+from email import encoders
+from email.message import Message
+from email.mime.audio import MIMEAudio
 from email.mime.base import MIMEBase
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from emil import Encoders
+#from email.mime.multipart import MIMEMultipart
+#from email.mime.base import MIMEBase
+#from email.mime.text import MIMEText
+#from emil import Encoders
 
 gmail_user = "dtemail098@gmail.com"
 gmail_pwd = "gmailAccount1"
