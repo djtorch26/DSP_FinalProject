@@ -24,7 +24,7 @@ from email.mime.text import MIMEText
 
 gmail_user = "dtemail098@gmail.com"
 gmail_pwd = "gmailAccount1"
-to = "djtorch123@gmail.com, tocarchid5@students.rowan.edu"
+to = "djtorch123@gmail.com"
 subject = "Wave File Test"
 text = "Hey this is a test to see if it emails wav files."
 attach = 'test.wav'
@@ -35,10 +35,10 @@ msg['To'] = to
 msg['Subject'] = subject
 msg.attach(MIMEText(text))
 
-part = MIMEBase('application', 'octect-stream')
+part = MIMEBase('application', 'octet-stream')
 part.set_payload(open(attach, 'rb').read())
 
-Encoders.encode_base64(part)
+encoders.encode_base64(part)
 part.add_header('Content-Dispostion', 'attachment; filename=%s"' % os.path.basename(attach))
 
 msg.attach(part)
