@@ -8,10 +8,11 @@ Created on Wed Apr 22 09:29:36 2020
 import os
 
 import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
-from email.mime.text import MIMEText
-from emil import Encoders
+import mimetypes
+#from email.mime.multipart import MIMEMultipart
+#from email.mime.base import MIMEBase
+#from email.mime.text import MIMEText
+#from emil import Encoders
 
 gmail_user = "dtemail098@gmail.com"
 gmail_pwd = "gmailAccount1"
