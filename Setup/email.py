@@ -8,11 +8,11 @@ Created on Wed Apr 22 09:29:36 2020
 import os
 
 import smtplib
-import mimetypes
-#from email.mime.multipart import MIMEMultipart
-#from email.mime.base import MIMEBase
-#from email.mime.text import MIMEText
-#from emil import Encoders
+
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
+from emil import Encoders
 
 gmail_user = "dtemail098@gmail.com"
 gmail_pwd = "gmailAccount1"
@@ -41,7 +41,7 @@ mailServer.ehlo()
 mailServer.login(gmail_user, gmail_pwd)
 mailServer.sendmail(gmail_user, to, msg.as_string())
 mailServer.close()
-print "Email Sent!"
+print("Email Sent!")
 
 
 
