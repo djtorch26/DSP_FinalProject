@@ -30,7 +30,7 @@ part = MIMEBase('application', 'octect-stream')
 part.set_payload(open(attach, 'rb').read())
 
 Encoders.encode_base64(part)
-part.add_header('Content-Dispostion', 'attachment; filename=%s" % os.path.basename(attach))
+part.add_header('Content-Dispostion', 'attachment; filename=%s"' % os.path.basename(attach))
 
 msg.attach(part)
 mailServer = smtplib.SMTP("smtp.gmail.com",587)
