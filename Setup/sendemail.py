@@ -51,5 +51,5 @@ def emailFile(file):
     mailServer.close()
     print("Email Sent!")
 
-
-
+emailFile('test.wav')
+emailFile('voiceWave.png')
