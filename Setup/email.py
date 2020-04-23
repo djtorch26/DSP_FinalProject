@@ -10,7 +10,7 @@ import os
 import smtplib
 import mimetypes
 
-from email import encoders
+import email
 from email.message import Message
 from email.mime.audio import MIMEAudio
 from email.mime.base import MIMEBase
@@ -38,7 +38,7 @@ msg.attach(MIMEText(text))
 part = MIMEBase('application', 'octet-stream')
 part.set_payload(open(attach, 'rb').read())
 
-encoders.encode_base64(part)
+email.encoders.encode_base64(part)
 part.add_header('Content-Dispostion', 'attachment; filename=%s"' % os.path.basename(attach))
 
 msg.attach(part)
