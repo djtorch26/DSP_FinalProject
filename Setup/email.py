@@ -18,10 +18,11 @@ import email
 #from email.mime.image import MIMEImage
 #from email.mime.multipart import MIMEMultipart
 #from email.mime.text import MIMEText
+from email.encoders import Encoders
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
-from emial.mime.encoders import Encoders
+
 
 gmail_user = "dtemail098@gmail.com"
 gmail_pwd = "gmailAccount1"
