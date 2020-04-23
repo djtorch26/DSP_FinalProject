@@ -6,13 +6,16 @@ Created on Thu Apr 23 02:09:36 2020
 """
 
 import speech_recognition as sr
+import os
+import time
 
 def get_audio():
     r = sr.Recognizer()
-    with open('test.wav','wb') as f:
-        f.write(audio.get_wav_data())
+    
     with sr.Microphone() as source:
         audio = r.listen(source)
+        with open('test.wav','wb') as f:
+            f.write(audio.get_wav_data())
         said = ""
 
         try:
