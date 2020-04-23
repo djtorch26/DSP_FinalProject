@@ -23,5 +23,3 @@ def get_audio():
         except Exception as e:
             print("Exception: " + str(e))
     return said
-
-get_audio()

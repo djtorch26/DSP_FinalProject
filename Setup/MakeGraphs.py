@@ -40,7 +40,7 @@ def voiceWavePNG():
     
 def FFTImage(wav_file):
     fs_rate, signal = wavfile.read(os.path.basename(wav_file))
-    print ("Frequency sampling", fs_rate)
+    print ("Sampling Frequency", fs_rate)
     l_audio = len(signal.shape)
     print ("Channels", l_audio)
     if l_audio == 2:
@@ -59,17 +59,21 @@ def FFTImage(wav_file):
     freqs_side = freqs[range(N//2)] # one side frequency range
     fft_freqs_side = np.array(freqs_side)
     plt.subplot(311)
+    
     p1 = plt.plot(t, signal, "g") # plotting the signal
     plt.xlabel('Time')
     plt.ylabel('Amplitude')
     plt.subplot(312)
+    
     p2 = plt.plot(freqs, FFT, "r") # plotting the complete fft spectrum
     plt.xlabel('Frequency (Hz)')
     plt.ylabel('Count dbl-sided')
     plt.subplot(313)
+    
     p3 = plt.plot(freqs_side, abs(FFT_side), "b") # plotting the positive fft spectrum
     plt.xlabel('Frequency (Hz)')
     plt.ylabel('Count single-sided')
     plt.savefig('FFTWave.png')
 
-FFTImage('test.wav')
+#Function Tests
+#FFTImage('test.wav')

@@ -23,13 +23,13 @@ def emailFile(file):
     attach = file 
     
     if "test" in file:
-        subject = "Wave File"
+        subject = "Wave Sound File"
         text = "This is the recorded voice from the Microphone.\n  To use this file you Must add the extension .wav to the no name file."
     if "voice" in file:
-        subject = "PNG File"
+        subject = "Wave Graph File"
         text = "This is a PNG file of the recorded voice.\n Add the .png once downloaded to view"
     if "FFT" in file:
-        subject = "PNG File"
+        subject = "FFT File"
         text = "This is a PNG file showing the FFT or frequency response of the Recorded Voice.\n Add the .png once downloaded to view"
     
     msg = MIMEMultipart()
@@ -54,6 +54,7 @@ def emailFile(file):
     mailServer.close()
     print("Email Sent!")
 
+#Function Tests
 #emailFile('test.wav')
 #emailFile('voiceWave.png')
-emailFile('FFTWave.png')
+#emailFile('FFTWave.png')
