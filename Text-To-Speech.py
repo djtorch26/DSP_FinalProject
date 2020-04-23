@@ -8,8 +8,8 @@ Speech to text analysis main
 import os
 from time import sleep
 from Setup import RecordAudio as record
-from Setup import MakeGraphs as mg
-from Setup import SendEmail as send
+from Setup import GraphStuff as graph
+from Setup import SendMail as send
 
 
 def main():
@@ -20,7 +20,7 @@ def main():
     record.get_audio()
     
     #Part 3: Analysis and generation of .wav file
-    mg.FFTImage()
+    graph.FFTImage()
     
     #Part 4: Print to console & send Email
     send.emailFile('test.wav')
