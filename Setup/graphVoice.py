@@ -56,7 +56,7 @@ def FFTImage(wav_file):
     FFT_side = FFT[range(N//2)] # one side FFT range
     freqs = scipy.fftpack.fftfreq(signal.size, t[1]-t[0])
     fft_freqs = np.array(freqs)
-    freqs_side = freqs[range(N/2)] # one side frequency range
+    freqs_side = freqs[range(N//2)] # one side frequency range
     fft_freqs_side = np.array(freqs_side)
     plt.subplot(311)
     p1 = plt.plot(t, signal, "g") # plotting the signal
