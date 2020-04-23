@@ -1,27 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Apr 22 09:29:36 2020
+This works with python Version 3 only
 
 @author: Dawson
 """
 
 import os
 import smtplib
-
-#import mimetypes
-#from email.MIMEMultipart import MIMEMultipart
-#from email.MIMEText import MIMEText
-#from email.MIMEImage import MIMEImage
-
-import email
-#from email import encoders
-#from email.message import Message
-#from email.mime.audio import MIMEAudio
-#from email.mime.base import MIMEBase
-#from email.mime.image import MIMEImage
-#from email.mime.multipart import MIMEMultipart
-#from email.mime.text import MIMEText
-
 from email import encoders
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
@@ -30,7 +16,7 @@ from email.mime.text import MIMEText
 
 gmail_user = "dtemail098@gmail.com"
 gmail_pwd = "gmailAccount1"
-to = "djtorch123@gmail.com"
+to = "djtorch123@gmail.com, tocarchid5@students.rowan.edu"
 subject = "Wave File Test"
 text = "Hey this is a test to see if it emails wav files."
 attach = 'test.wav'
