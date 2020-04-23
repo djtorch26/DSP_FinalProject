@@ -15,9 +15,8 @@ from Setup import SendEmail as send
 def main():
 
     #Part 1: Collect audio data from USB microphone
-                                &
-    #Part 2: Using libraries to determine text output determined
-            #by .wav file
+    #                            &
+    #Part 2: Using libraries to determine text output determined by .wav file  
     record.get_audio()
     
     #Part 3: Analysis and generation of .wav file
