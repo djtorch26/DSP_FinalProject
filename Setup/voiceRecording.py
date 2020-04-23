@@ -17,13 +17,17 @@ def get_audio():
         with open('test.wav','wb') as f:
             f.write(audio.get_wav_data())
         said = ""
-
         try:
             said = r.recognize_google(audio)
             print(said)
         except Exception as e:
             print("Exception: " + str(e))
-
+        print("/n")
+        print("/n")
+        print("/n")
+        print("/n")
+        print("/n")
+        print("/n")
     return said
 
 get_audio()
