@@ -6,21 +6,22 @@ Created on Wed Apr 22 09:29:36 2020
 """
 
 import os
-
 import smtplib
-#import mimetypes
+import email
 
+#import mimetypes
+#import email
 #from email import encoders
-from email.message import Message
-from email.mime.audio import MIMEAudio
-from email.mime.base import MIMEBase
-from email.mime.image import MIMEImage
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-#from email.mime.multipart import MIMEMultipart
+#from email.message import Message
+#from email.mime.audio import MIMEAudio
 #from email.mime.base import MIMEBase
+#from email.mime.image import MIMEImage
+#from email.mime.multipart import MIMEMultipart
 #from email.mime.text import MIMEText
-#from emil import Encoders
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
+from emial.mime.encoders import Encoders
 
 gmail_user = "dtemail098@gmail.com"
 gmail_pwd = "gmailAccount1"
@@ -38,7 +39,7 @@ msg.attach(MIMEText(text))
 part = MIMEBase('application', 'octet-stream')
 part.set_payload(open(attach, 'rb').read())
 
-email.encoders.encode_base64(part)
+Encoders.encode_base64(part)
 part.add_header('Content-Dispostion', 'attachment; filename=%s"' % os.path.basename(attach))
 
 msg.attach(part)
