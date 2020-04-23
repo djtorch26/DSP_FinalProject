@@ -6,14 +6,6 @@ Created on Thu Apr 23 02:09:36 2020
 """
 
 import speech_recognition as sr
-from gtts import gTTS
-import os
-import time
-
-def speak(text):
-    tts = gTTS(text=text, lang='en')
-    filename = 'test.wav'
-    tts.save(filename)
 
 def get_audio():
     r = sr.Recognizer()
@@ -31,3 +23,4 @@ def get_audio():
 
     return said
 
+get_audio()
