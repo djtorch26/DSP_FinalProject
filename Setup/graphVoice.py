@@ -11,6 +11,7 @@ import wave
 import sys
 
 
+
 spf = wave.open("test.wav", "r")
 
 # Extract Raw Audio from Wav File
@@ -26,4 +27,4 @@ if spf.getnchannels() == 2:
 plt.figure(1)
 plt.title("Signal Wave...")
 plt.plot(signal)
-plt.show()
+plt.savefig('voiceWave.png')
