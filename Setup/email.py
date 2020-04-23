@@ -9,7 +9,10 @@ import os
 import smtplib
 
 #import mimetypes
-import email
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEText import MIMEText
+from email.MIMEImage import MIMEImage
+
 
 #from email import encoders
 #from email.message import Message
@@ -32,16 +35,16 @@ subject = "Wave File Test"
 text = "Hey this is a test to see if it emails wav files."
 attach = 'test.wav'
 
-msg = email.mime.multipart.MIMEMultipart()
+msg = MIMEMultipart()
 msg['From'] = gmail_user
 msg['To'] = to
 msg['Subject'] = subject
-msg.attach(email.mime.text.MIMEText(text))
+msg.attach(MIMEText(text))
 
-part = email.mime.base.MIMEBase('application', 'octet-stream')
+part = MIMEBase('application', 'octet-stream')
 part.set_payload(open(attach, 'rb').read())
 
-email.encoders.encode_base64(part)
+Encoders.encode_base64(part)
 part.add_header('Content-Dispostion', 'attachment; filename=%s"' % os.path.basename(attach))
 
 msg.attach(part)
