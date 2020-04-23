@@ -16,9 +16,9 @@ from email.mime.text import MIMEText
 
 gmail_user = "dtemail098@gmail.com"
 gmail_pwd = "gmailAccount1"
-to = "djtorch123@gmail.com"
-subject = "Wave File Test"
-text = "Hey this is a test to see if it emails wav files."
+to = "ktorch6@gmail.com"
+subject = "Coronavirus package drop"
+text = "kaitlyn smells."
 attach = 'test.wav'
 
 msg = MIMEMultipart()
