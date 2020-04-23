@@ -52,6 +52,6 @@ def emailFile(file):
     print("Email Sent!")
 
 emailFile('test.wav')
-emailFile('voiceWav.png')
+emailFile('voiceWave.png')
 
 
