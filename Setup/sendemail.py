@@ -24,10 +24,13 @@ def emailFile(file):
     
     if "test" in file:
         subject = "Wave File"
-        text = "This is the recorded voice from the Microphone.\n   To use this file you Must add the extension .wav to the no name file."
+        text = "This is the recorded voice from the Microphone.\n  To use this file you Must add the extension .wav to the no name file."
     if "voice" in file:
         subject = "PNG File"
         text = "This is a PNG file of the recorded voice.\n Add the .png once downloaded to view"
+    if "FFT" in file:
+        subject = "PNG File"
+        text = "This is a PNG file showing the FFT or frequency response of the Recorded Voice.\n Add the .png once downloaded to view"
     
     msg = MIMEMultipart()
     msg['From'] = gmail_user
@@ -53,3 +56,4 @@ def emailFile(file):
 
 #emailFile('test.wav')
 #emailFile('voiceWave.png')
+emailFile('FFTWave.png')
