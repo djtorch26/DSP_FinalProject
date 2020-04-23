@@ -7,10 +7,10 @@ Created on Wed Apr 22 09:29:36 2020
 
 import os
 import smtplib
-import email
 
 #import mimetypes
-#import email
+import email
+
 #from email import encoders
 #from email.message import Message
 #from email.mime.audio import MIMEAudio
@@ -18,10 +18,11 @@ import email
 #from email.mime.image import MIMEImage
 #from email.mime.multipart import MIMEMultipart
 #from email.mime.text import MIMEText
-from email.encoders import Encoders
-from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
-from email.mime.text import MIMEText
+
+#import email.encoders as encoders
+#from email.mime import MIMEMultipart
+#from email.mime.base import MIMEBase
+#from email.mime.text import MIMEText
 
 
 gmail_user = "dtemail098@gmail.com"
@@ -31,16 +32,16 @@ subject = "Wave File Test"
 text = "Hey this is a test to see if it emails wav files."
 attach = 'test.wav'
 
-msg = MIMEMultipart()
+msg = email.mime.multipart.MIMEMultipart()
 msg['From'] = gmail_user
 msg['To'] = to
 msg['Subject'] = subject
-msg.attach(MIMEText(text))
+msg.attach(email.mime.text.MIMEText(text))
 
-part = MIMEBase('application', 'octet-stream')
+part = email.mime.base.MIMEBase('application', 'octet-stream')
 part.set_payload(open(attach, 'rb').read())
 
-Encoders.encode_base64(part)
+email.encoders.encode_base64(part)
 part.add_header('Content-Dispostion', 'attachment; filename=%s"' % os.path.basename(attach))
 
 msg.attach(part)
