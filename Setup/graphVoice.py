@@ -53,7 +53,7 @@ def FFTImage(wav_file):
     print ("Timestep between samples Ts", Ts)
     t = scipy.arange(0, secs, Ts) # time vector as scipy arange field / numpy.ndarray
     FFT = abs(scipy.fft(signal))
-    FFT_side = FFT[range(N/2)] # one side FFT range
+    FFT_side = FFT[range(N//2)] # one side FFT range
     freqs = scipy.fftpack.fftfreq(signal.size, t[1]-t[0])
     fft_freqs = np.array(freqs)
     freqs_side = freqs[range(N/2)] # one side frequency range
