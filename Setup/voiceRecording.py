@@ -22,12 +22,6 @@ def get_audio():
             print(said)
         except Exception as e:
             print("Exception: " + str(e))
-        print("/n")
-        print("/n")
-        print("/n")
-        print("/n")
-        print("/n")
-        print("/n")
     return said
 
 get_audio()
