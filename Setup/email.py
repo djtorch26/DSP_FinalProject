@@ -8,9 +8,9 @@ Created on Wed Apr 22 09:29:36 2020
 import os
 
 import smtplib
-import mimetypes
+#import mimetypes
 
-import email
+#from email import encoders
 from email.message import Message
 from email.mime.audio import MIMEAudio
 from email.mime.base import MIMEBase
@@ -50,7 +50,6 @@ mailServer.login(gmail_user, gmail_pwd)
 mailServer.sendmail(gmail_user, to, msg.as_string())
 mailServer.close()
 print("Email Sent!")
-
 
 
 
