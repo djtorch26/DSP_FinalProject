@@ -73,7 +73,7 @@ def FFTImage(wav_file):
     p3 = plt.plot(freqs_side, abs(FFT_side), "b") # plotting the positive fft spectrum
     plt.xlabel('Frequency (Hz)')
     plt.ylabel('Count single-sided')
-    plt.savefig('FFTWave.png')
+    plt.savefig('FFTwave.png')
 
 #Function Tests
 #FFTImage('test.wav')
