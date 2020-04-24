@@ -17,6 +17,7 @@ def get_audio():
         with open('test.wav','wb') as f:
             f.write(audio.get_wav_data())
         said = ""
+        print("Speak Now")
         try:
             said = r.recognize_google(audio)
             print(said)

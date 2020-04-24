@@ -20,12 +20,17 @@ def main():
     record.get_audio()
     
     #Part 3: Analysis and generation of .wav file
+    graph.voiceWavePNG('test.wav')
     graph.FFTImage('test.wav')
+    
     
     #Part 4: Print to console & send Email
     send.emailFile('test.wav')
+    print("wav file sent")
     send.emailFile('voiceWave.png')
+    print("voiceWave.png sent")
     send.emailFile('FFTwave.png')
+    print("FFTwave.png sent")
     
     
 if __name__ == "__main__":

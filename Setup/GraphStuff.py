@@ -37,6 +37,7 @@ def voiceWavePNG():
     plt.title("Signal Wave...")
     plt.plot(signal)
     plt.savefig('voiceWave.png')
+    print("voiceWave.png SAVED")
     
 def FFTImage(wav_file):
     fs_rate, signal = wavfile.read(os.path.basename(wav_file))
@@ -74,6 +75,8 @@ def FFTImage(wav_file):
     plt.xlabel('Frequency (Hz)')
     plt.ylabel('Count single-sided')
     plt.savefig('FFTwave.png')
+    
+    print("FFTwave.png SAVED")
 
 #Function Tests
 #FFTImage('test.wav')
