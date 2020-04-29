@@ -14,8 +14,8 @@ from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 
 
-gmail_user = "dtemail098@gmail.com"
-gmail_pwd = "gmailAccount1"
+gmail_user = ""
+gmail_pwd = ""
 to = "djtorch123@gmail.com"
 
 def emailFile(file):
